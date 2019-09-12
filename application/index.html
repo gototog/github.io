@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap</title>
+
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+    <script src="lib/p5.js"></script>
+    <script src="lib/p5.dom.js"></script>
+    <script src="lib/p5.sound.js"></script>
+  <style>
+    #button-record {
+      position: fixed;
+      top: 100px;
+      left: 40%;
+    }
+  </style>
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.js"></script> -->
+
+
+    <script src="Utils.js"></script>
+    <script src="MainFunctions.js"></script>
+    <script src="MediaRecorder.js"></script>
+    <script src="sketch.js"></script>
+    <!-- <script src="sketchContour.js"></script> -->
+
+
+</head>
+
+<body>
+
+<div class="pull-right">
+    <button id="button-showhide" class="btn btn-secondary btn-sm">Show/Hide</button>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-12 col-md-8">
+            <div id="main-canvas"></div>
+        </div>
+        <div class="col-sm-12 col-md-4 bg-white">
+            <button id="button-record" class="btn btn-danger"><i class="fa fa-circle"></i></button>
+            <select class="col form-control" id="select-image-front"></select>
+            <select class="col form-control" id="select-image-back"></select>
+            <select class="col form-control" id="select-option"></select>
+
+          <div class="row">
+            <input type="range" class="form-control-range col-4 offset-1" id="range-spectre" min="0" max="255" value="100">
+            <input type="range" class="form-control-range col-4 offset-2" id="range-density" min="0" max="100" value="0">
+          </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>
