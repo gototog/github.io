@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="assets/css/main.css"/>
 </head>
 <body class="is-preload">
-
 <!-- Header -->
 <section id="header">
     <header class="major">
@@ -110,11 +109,13 @@
             <div class="col-12">
                 <ul class="actions special">
                     <li><input type="submit" value="Envoyer" class="primary"/></li>
+
                 </ul>
             </div>
         </div>
         </form>
     </div>
+    <button class="raptorize btn btn-warning" style="display: none">ATTACK</button>
 </section>
 
 <!-- Scripts -->
@@ -125,14 +126,21 @@
 <script src="assets/js/breakpoints.min.js"></script>
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
-
 <script src="https://rawgit.com/Haeresis/konami-code-js/master/src/konami-code.js"></script>
+<script src="assets/raptorize/jquery.raptorize.1.0.js"></script>
 <script>
 
     console.log('try ⬆️⬆️⬇️⬇️⬅️➡⬅️️➡️BA');
     new KonamiCode(function () {
         console.log('KONAMI activated');
-        var s = document.createElement('script');s.setAttribute('src', 'http://fontbomb.ilex.ca/js/main.js');document.body.appendChild(s);
+        // bomb
+        // var s = document.createElement('script');s.setAttribute('src', 'http://fontbomb.ilex.ca/js/main.js');document.body.appendChild(s);
+
+        // raptor
+        $('.raptorize').raptorize({
+            'enterOn' : 'timer',
+                'delayTime' : 500
+        });
     });
 </script>
 </body>
