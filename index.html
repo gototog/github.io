@@ -126,5 +126,14 @@
 <script src="assets/js/util.js"></script>
 <script src="assets/js/main.js"></script>
 
+<script src="https://rawgit.com/Haeresis/konami-code-js/master/src/konami-code.js"></script>
+<script>
+
+    console.log('try ⬆️⬆️⬇️⬇️⬅️➡⬅️️➡️BA');
+    new KonamiCode(function () {
+        console.log('KONAMI activated');
+        var s = document.createElement('script');s.setAttribute('src', 'http://fontbomb.ilex.ca/js/main.js');document.body.appendChild(s);
+    });
+</script>
 </body>
 </html>
