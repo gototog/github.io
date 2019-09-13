@@ -48,7 +48,7 @@ function setup() {
 
     // Ici on définit les medias (photos + videos) que l'on va utiliser dans le programme
     const medias = ["none",
-        "enquete/batiment.jpg", "enquete/batiment2.jpg", "enquete/nightclub.jpg", "enquete/", "pic02.jpg",
+        "enquete/batiment.jpg", "enquete/batiment2.jpg", "enquete/nightclub.jpg", "pic02.jpg",
         "franck.mp4", "tst.mp4", "minions.mp4", "beach.jpg", "pngtest.png",
         "webcam:0", "webcam:1", "meteo/accident.jpg", "meteo/accident2.jpg", "meteo/paneau.png", "meteo/attention.png", "meteo/soleil.jpg", "meteo/azkaban.jpg", "meteo/transat.jpg", "meteo/dobby.jpg", "meteo/Carte.jpg", "meteo/manif1.jpg", "lesAnges/intro.jpg", "JT/JT.jpg", "generique.mp4"
     ]

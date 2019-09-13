@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Application</title>
 
@@ -74,19 +74,36 @@
 
     hammer.add(swipe);
 
+    // Ne pas mélanger évenement jquery et d5, ca perd
     hammer.on('swipeleft', function(){
-        $('#select-image-back option:selected').prev().attr('selected', 'selected');
+        console.log('left');
+        if($('#select-image-back option:selected').prev().val() !== undefined) {
+            selBackground.value($('#select-image-back option:selected').prev().val());
+            bgImg = loadMedia(selBackground.value());
+        }
     });
 
     hammer.on('swiperight', function(){
-        $('#select-image-back option:selected').next().attr('selected', 'selected');
+        console.log('right');
+        if($('#select-image-back option:selected').next().val() !== undefined) {
+            selBackground.value($('#select-image-back option:selected').next().val());
+            bgImg = loadMedia(selBackground.value());
+        }
     });
     hammer.on('swipeup', function(){
-        $('#select-image-front option:selected').prev().attr('selected', 'selected');
+        console.log('up');
+        if($('#select-option option:selected').next().val() !== undefined) {
+            selOption.value($('#select-option option:selected').next().val());
+            name_effet = selOption.value();
+        }
     });
 
     hammer.on('swipedown', function(){
-        $('#select-imagefront option:selected').next().attr('selected', 'selected');
+        console.log('down');
+        if($('#select-option option:selected').prev().val() !== undefined) {
+            selOption.value($('#select-option option:selected').prev().val());
+            name_effet = selOption.value();
+        }
     });
 </script>
 
